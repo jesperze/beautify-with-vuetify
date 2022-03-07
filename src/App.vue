@@ -1,10 +1,20 @@
 <template>
 	<v-app>
-		<v-app-bar app color="primary" dark>
-			<v-toolbar-title>Vuetify Dashboard</v-toolbar-title>
+		<v-app-bar app class="gradient"
+
+		 >
+			<v-app-bar-nav-icon></v-app-bar-nav-icon>
+			<v-toolbar-title>ezper</v-toolbar-title>
 			<v-spacer></v-spacer>
-			<v-btn text rounded>Home</v-btn>
-			<v-btn text rounded>Login</v-btn>
+			<v-btn icon>
+				<v-icon>mdi-magnify</v-icon>
+			</v-btn>
+			<v-btn icon>
+				<v-icon>mdi-heart</v-icon>
+			</v-btn>
+			<v-btn icon>
+				<v-icon>mdi-dots-vertical</v-icon>
+			</v-btn>
 		</v-app-bar>
 		<v-content>
 			<!-- Login Module -->
@@ -28,7 +38,7 @@
 				<v-card-actions>
 					<v-btn color="success">Register</v-btn>
 					<v-spacer></v-spacer>
-					<v-btn color="info">Login</v-btn>
+					<v-btn class="gradient">Login</v-btn>
 				</v-card-actions>
 			</v-card>
 		</v-content>
@@ -45,7 +55,7 @@
 					{{ link }}
 				</v-btn>
 				<v-flex primary lighten-2 py-4 text-center white--text xs12>
-					{{ new Date().getFullYear() }} — <strong>Vuetify Dashboard</strong>
+					{{ new Date().getFullYear() }} — <strong>ezper Dashboard</strong>
 				</v-flex>
 			</v-layout>
 		</v-footer>
@@ -63,3 +73,20 @@ export default {
 	}
 }
 </script>
+
+<style scoped>
+.gradient2 {
+	background: #3A1C71;
+	background: -webkit-linear-gradient(to right, #FFAF7B, #D76D77, #3A1C71);
+	background: linear-gradient(to right, #FFAF7B, #D76D77, #3A1C71);
+}
+.gradient{
+	background: linear-gradient(90deg, #fcff9e 0%, #c67700 100%);
+}
+
+
+.gradient1 {
+	background: rgb(131,58,180);
+	background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+}
+</style>
